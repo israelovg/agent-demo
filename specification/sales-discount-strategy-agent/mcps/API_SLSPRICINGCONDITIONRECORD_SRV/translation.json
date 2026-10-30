@@ -1,0 +1,1150 @@
+{
+  "mcpTranslationVersion": "0.6",
+  "target": {
+    "ordId": "sap.s4:apiResource:API_SLSPRICINGCONDITIONRECORD_SRV:v1",
+    "type": "edmx"
+  },
+  "serverInfo": {
+    "name": "sap.mcp/api_slspricingconditionrecord_srv",
+    "title": "api_slspricingconditionrecord_srv",
+    "version": "1.0.0",
+    "description": "MCP server for the api_slspricingconditionrecord_srv service."
+  },
+  "tools": [
+    {
+      "name": "get_metadata_api_slspricingconditionrecord_srv",
+      "title": "get_metadata_api_slspricingconditionrecord_srv",
+      "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+      "odataType": {
+        "metadataRequest": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "batch_for_api_slspricingconditionrecord_srv",
+      "title": "batch_for_api_slspricingconditionrecord_srv",
+      "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+      "odataType": {
+        "batchRequest": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "list_a_slsprcgcndnrecdvalidity",
+      "title": "list_A_SlsPrcgCndnRecdValidity_for_api_slspricingconditionrecord_srv",
+      "description": "Retrieve a list of entities from the A_SlsPrcgCndnRecdValidity collection in the api_slspricingconditionrecord_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_slspricingconditionrecord_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgCndnRecdValidity",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "inlinecount"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_a_slsprcgcndnrecdvalidity",
+      "title": "get_A_SlsPrcgCndnRecdValidity_for_api_slspricingconditionrecord_srv",
+      "description": "Retrieve a single entity by its key from the A_SlsPrcgCndnRecdValidity collection in the api_slspricingconditionrecord_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_slspricingconditionrecord_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgCndnRecdValidity",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "ConditionRecord",
+              "newParameterName": "conditionrecord"
+            },
+            {
+              "name": "ConditionValidityEndDate",
+              "newParameterName": "conditionvalidityenddate"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "count_a_slsprcgcndnrecdvalidity",
+      "title": "count_A_SlsPrcgCndnRecdValidity_for_api_slspricingconditionrecord_srv",
+      "description": "Get the total count of entities in the A_SlsPrcgCndnRecdValidity collection in the api_slspricingconditionrecord_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_slspricingconditionrecord_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgCndnRecdValidity",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "list_a_slsprcgconditionrecord",
+      "title": "list_A_SlsPrcgConditionRecord_for_api_slspricingconditionrecord_srv",
+      "description": "Retrieve a list of entities from the A_SlsPrcgConditionRecord collection in the api_slspricingconditionrecord_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_slspricingconditionrecord_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgConditionRecord",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "inlinecount"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_a_slsprcgconditionrecord",
+      "title": "get_A_SlsPrcgConditionRecord_for_api_slspricingconditionrecord_srv",
+      "description": "Retrieve a single entity by its key from the A_SlsPrcgConditionRecord collection in the api_slspricingconditionrecord_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_slspricingconditionrecord_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgConditionRecord",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "ConditionRecord",
+              "newParameterName": "conditionrecord"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "count_a_slsprcgconditionrecord",
+      "title": "count_A_SlsPrcgConditionRecord_for_api_slspricingconditionrecord_srv",
+      "description": "Get the total count of entities in the A_SlsPrcgConditionRecord collection in the api_slspricingconditionrecord_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_slspricingconditionrecord_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgConditionRecord",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "list_a_slsprcgconditionrecordtext",
+      "title": "list_A_SlsPrcgConditionRecordText_for_api_slspricingconditionrecord_srv",
+      "description": "Retrieve a list of entities from the A_SlsPrcgConditionRecordText collection in the api_slspricingconditionrecord_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_slspricingconditionrecord_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgConditionRecordText",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "inlinecount"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_a_slsprcgconditionrecordtext",
+      "title": "get_A_SlsPrcgConditionRecordText_for_api_slspricingconditionrecord_srv",
+      "description": "Retrieve a single entity by its key from the A_SlsPrcgConditionRecordText collection in the api_slspricingconditionrecord_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_slspricingconditionrecord_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgConditionRecordText",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "ConditionRecord",
+              "newParameterName": "conditionrecord"
+            },
+            {
+              "name": "ConditionSequentialNumber",
+              "newParameterName": "conditionsequentialnumber"
+            },
+            {
+              "name": "Language",
+              "newParameterName": "language"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "count_a_slsprcgconditionrecordtext",
+      "title": "count_A_SlsPrcgConditionRecordText_for_api_slspricingconditionrecord_srv",
+      "description": "Get the total count of entities in the A_SlsPrcgConditionRecordText collection in the api_slspricingconditionrecord_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_slspricingconditionrecord_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgConditionRecordText",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "list_to_slsprcgcndnrecdsuplmnt_in_a_slsprcgcndnrecdvalidity",
+      "title": "list_to_SlsPrcgCndnRecdSuplmnt_in_A_SlsPrcgCndnRecdValidity_for_api_slspricingconditionrecord_srv",
+      "description": "Navigate from A_SlsPrcgCndnRecdValidity to related A_SlsPrcgCndnRecdSuplmntType entities via the 'to_SlsPrcgCndnRecdSuplmnt' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_api_slspricingconditionrecord_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgCndnRecdValidity",
+          "navigationProperty": {
+            "name": "to_SlsPrcgCndnRecdSuplmnt",
+            "crudOperation": "read",
+            "parameters": [
+              {
+                "name": "filter"
+              },
+              {
+                "name": "select"
+              },
+              {
+                "name": "orderby"
+              },
+              {
+                "name": "top"
+              },
+              {
+                "name": "skip"
+              },
+              {
+                "name": "expand"
+              },
+              {
+                "name": "inlinecount"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "ConditionRecord",
+              "newParameterName": "conditionrecord"
+            },
+            {
+              "name": "ConditionValidityEndDate",
+              "newParameterName": "conditionvalidityenddate"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "count_to_slsprcgcndnrecdsuplmnt_in_a_slsprcgcndnrecdvalidity",
+      "title": "count_to_SlsPrcgCndnRecdSuplmnt_in_A_SlsPrcgCndnRecdValidity_for_api_slspricingconditionrecord_srv",
+      "description": "Count A_SlsPrcgCndnRecdSuplmntType entities accessible via the 'to_SlsPrcgCndnRecdSuplmnt' navigation property of A_SlsPrcgCndnRecdValidity in the api_slspricingconditionrecord_srv service. Returns the total number of matching entities.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgCndnRecdValidity",
+          "navigationProperty": {
+            "name": "to_SlsPrcgCndnRecdSuplmnt",
+            "crudOperation": "count",
+            "parameters": [
+              {
+                "name": "filter"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "ConditionRecord",
+              "newParameterName": "conditionrecord"
+            },
+            {
+              "name": "ConditionValidityEndDate",
+              "newParameterName": "conditionvalidityenddate"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "list_to_slsprcgcndnrecdvalidity_in_a_slsprcgconditionrecord",
+      "title": "list_to_SlsPrcgCndnRecdValidity_in_A_SlsPrcgConditionRecord_for_api_slspricingconditionrecord_srv",
+      "description": "Navigate from A_SlsPrcgConditionRecord to related A_SlsPrcgCndnRecdValidityType entities via the 'to_SlsPrcgCndnRecdValidity' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_api_slspricingconditionrecord_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgConditionRecord",
+          "navigationProperty": {
+            "name": "to_SlsPrcgCndnRecdValidity",
+            "crudOperation": "read",
+            "parameters": [
+              {
+                "name": "filter"
+              },
+              {
+                "name": "select"
+              },
+              {
+                "name": "orderby"
+              },
+              {
+                "name": "top"
+              },
+              {
+                "name": "skip"
+              },
+              {
+                "name": "expand"
+              },
+              {
+                "name": "inlinecount"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "ConditionRecord",
+              "newParameterName": "conditionrecord"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "count_to_slsprcgcndnrecdvalidity_in_a_slsprcgconditionrecord",
+      "title": "count_to_SlsPrcgCndnRecdValidity_in_A_SlsPrcgConditionRecord_for_api_slspricingconditionrecord_srv",
+      "description": "Count A_SlsPrcgCndnRecdValidityType entities accessible via the 'to_SlsPrcgCndnRecdValidity' navigation property of A_SlsPrcgConditionRecord in the api_slspricingconditionrecord_srv service. Returns the total number of matching entities.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgConditionRecord",
+          "navigationProperty": {
+            "name": "to_SlsPrcgCndnRecdValidity",
+            "crudOperation": "count",
+            "parameters": [
+              {
+                "name": "filter"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "ConditionRecord",
+              "newParameterName": "conditionrecord"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "list_to_slsprcgconditionrecordtext_in_a_slsprcgconditionrecord",
+      "title": "list_to_SlsPrcgConditionRecordText_in_A_SlsPrcgConditionRecord_for_api_slspricingconditionrecord_srv",
+      "description": "Navigate from A_SlsPrcgConditionRecord to related A_SlsPrcgConditionRecordTextType entities via the 'to_SlsPrcgConditionRecordText' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_api_slspricingconditionrecord_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgConditionRecord",
+          "navigationProperty": {
+            "name": "to_SlsPrcgConditionRecordText",
+            "crudOperation": "read",
+            "parameters": [
+              {
+                "name": "filter"
+              },
+              {
+                "name": "select"
+              },
+              {
+                "name": "orderby"
+              },
+              {
+                "name": "top"
+              },
+              {
+                "name": "skip"
+              },
+              {
+                "name": "expand"
+              },
+              {
+                "name": "inlinecount"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "ConditionRecord",
+              "newParameterName": "conditionrecord"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "count_to_slsprcgconditionrecordtext_in_a_slsprcgconditionrecord",
+      "title": "count_to_SlsPrcgConditionRecordText_in_A_SlsPrcgConditionRecord_for_api_slspricingconditionrecord_srv",
+      "description": "Count A_SlsPrcgConditionRecordTextType entities accessible via the 'to_SlsPrcgConditionRecordText' navigation property of A_SlsPrcgConditionRecord in the api_slspricingconditionrecord_srv service. Returns the total number of matching entities.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SlsPrcgConditionRecord",
+          "navigationProperty": {
+            "name": "to_SlsPrcgConditionRecordText",
+            "crudOperation": "count",
+            "parameters": [
+              {
+                "name": "filter"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "ConditionRecord",
+              "newParameterName": "conditionrecord"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    }
+  ]
+}

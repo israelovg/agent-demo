@@ -1,0 +1,12 @@
+apiVersion: solution.sap/v1
+kind: Solution
+
+metadata:
+  name: sales-discount-strategy-3b73e
+  version: "1.0.0"
+  description: AI agent solution that suggests optimal discount strategies for sales reps based on customer history, deal size, and competitor pricing
+
+assets:
+  - ref: ./assets/sales-discount-strategy-agent/asset.yaml
+  - ref: ./assets/sap-s4-slspricingconditionrecord-srv-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-slspricingprocedure-srv-mcp-server/asset.yaml
