@@ -3,7 +3,7 @@ kind: Solution
 
 metadata:
   name: sales-discount-strategy-3b73e
-  version: "1.0.0"
+  version: "1.0.1"
   description: AI agent solution that suggests optimal discount strategies for sales reps based on customer history, deal size, and competitor pricing
 
 assets:
