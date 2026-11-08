@@ -1,0 +1,21 @@
+apiVersion: asset.sap/v1
+kind: Asset
+type: mcp-server
+
+metadata:
+  name: sap-s4-slspricingconditionrecord-srv-mcp-server
+  description: Exposes SAP S/4HANA Sales Pricing Condition Record operations as read-only MCP tools for customer discount history retrieval
+  version: "1.0.0"
+  translation: mcp-translation/translation.json
+  apiSpec: mcp-translation/api-spec.edmx
+
+requires:
+  - name: API_SLSPRICINGCONDITIONRECORD_SRV
+    kind: api
+    ordId: sap.s4:apiResource:API_SLSPRICINGCONDITIONRECORD_SRV:v1
+
+provides:
+  apis:
+    - name: sap-s4-slspricingconditionrecord-srv-mcp-server
+      kind: mcp-server
+      ordId: customer.build:apiResource:sales-discount-strategy-3b73e.sap-s4-slspricingconditionrecord-srv-mcp-server:v1

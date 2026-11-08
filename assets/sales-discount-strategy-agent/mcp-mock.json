@@ -1,0 +1,581 @@
+{
+  "servers": {
+    "s4-slspricingconditionrecord-srv": {
+      "mcp_server_name": "sap.mcp/api_slspricingconditionrecord_srv",
+      "description": "MCP server for the api_slspricingconditionrecord_srv service.",
+      "tools": {
+        "get_metadata_api_slspricingconditionrecord_srv": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "entitySet": { "type": "string", "description": "Filter to specific entity set" }
+            },
+            "required": []
+          },
+          "mock_response": "<edmx:Edmx Version=\"1.0\"><edmx:DataServices><Schema Namespace=\"API_SLSPRICINGCONDITIONRECORD_SRV\"><EntityType Name=\"A_SlsPrcgConditionRecord\"><Key><PropertyRef Name=\"ConditionRecord\"/></Key><Property Name=\"ConditionRecord\" Type=\"Edm.String\" MaxLength=\"10\"/><Property Name=\"ConditionType\" Type=\"Edm.String\" MaxLength=\"4\"/><Property Name=\"RateWithUnit\" Type=\"Edm.Decimal\"/><Property Name=\"ConditionRateValue\" Type=\"Edm.Decimal\"/><Property Name=\"ConditionRateValueUnit\" Type=\"Edm.String\"/><Property Name=\"SoldToParty\" Type=\"Edm.String\" MaxLength=\"10\"/><Property Name=\"ValidityEndDate\" Type=\"Edm.DateTime\"/><Property Name=\"ValidityStartDate\" Type=\"Edm.DateTime\"/></EntityType></Schema></edmx:DataServices></edmx:Edmx>"
+        },
+        "batch_for_api_slspricingconditionrecord_srv": {
+          "description": "Execute multiple OData operations in a single batch request.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "requests": { "type": "array", "description": "Array of batch requests" }
+            },
+            "required": ["requests"]
+          },
+          "mock_response": { "responses": [] }
+        },
+        "list_a_slsprcgcndnrecdvalidity": {
+          "description": "Retrieve a list of entities from the A_SlsPrcgCndnRecdValidity collection.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string", "description": "Maximum number of results" },
+              "$skip": { "type": "string", "description": "Number of results to skip" },
+              "$filter": { "type": "string", "description": "OData filter expression" },
+              "$select": { "type": "string", "description": "Fields to return" },
+              "$orderby": { "type": "string", "description": "Sort order" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "ConditionRecord": "0000000001",
+                "ConditionValidityEndDate": "/Date(4102444800000)/",
+                "ConditionValidityStartDate": "/Date(1704067200000)/",
+                "ConditionTableName": "A004"
+              },
+              {
+                "ConditionRecord": "0000000002",
+                "ConditionValidityEndDate": "/Date(4102444800000)/",
+                "ConditionValidityStartDate": "/Date(1704067200000)/",
+                "ConditionTableName": "A004"
+              }
+            ]
+          }
+        },
+        "get_a_slsprcgcndnrecdvalidity": {
+          "description": "Retrieve a single entity by its key from the A_SlsPrcgCndnRecdValidity collection.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ConditionRecord": { "type": "string", "description": "Condition record number" },
+              "ConditionValidityEndDate": { "type": "string", "description": "Validity end date" }
+            },
+            "required": ["ConditionRecord", "ConditionValidityEndDate"]
+          },
+          "mock_response": {
+            "ConditionRecord": "0000000001",
+            "ConditionValidityEndDate": "/Date(4102444800000)/",
+            "ConditionValidityStartDate": "/Date(1704067200000)/",
+            "ConditionTableName": "A004"
+          }
+        },
+        "count_a_slsprcgcndnrecdvalidity": {
+          "description": "Get the total count of entities in the A_SlsPrcgCndnRecdValidity collection.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$filter": { "type": "string", "description": "OData filter expression" }
+            },
+            "required": []
+          },
+          "mock_response": { "value": 12 }
+        },
+        "list_a_slsprcgconditionrecord": {
+          "description": "Retrieve a list of sales pricing condition records.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string", "description": "Maximum number of results" },
+              "$skip": { "type": "string", "description": "Number of results to skip" },
+              "$filter": { "type": "string", "description": "OData filter expression, e.g. SoldToParty eq 'C1001'" },
+              "$select": { "type": "string", "description": "Fields to return" },
+              "$orderby": { "type": "string", "description": "Sort order" },
+              "$expand": { "type": "string", "description": "Navigation properties to expand" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "ConditionRecord": "0000100001",
+                "ConditionType": "K007",
+                "RateWithUnit": "8.000",
+                "ConditionRateValue": "8.000",
+                "ConditionRateValueUnit": "%",
+                "SoldToParty": "C1001",
+                "ConditionScaleQuantity": "1.000",
+                "ConditionScaleUnit": "EA",
+                "ValidityEndDate": "/Date(4102444800000)/",
+                "ValidityStartDate": "/Date(1704067200000)/",
+                "CreatedByUser": "SALESREP01",
+                "CreationDate": "/Date(1704067200000)/"
+              },
+              {
+                "ConditionRecord": "0000100002",
+                "ConditionType": "K007",
+                "RateWithUnit": "10.000",
+                "ConditionRateValue": "10.000",
+                "ConditionRateValueUnit": "%",
+                "SoldToParty": "C1001",
+                "ConditionScaleQuantity": "10.000",
+                "ConditionScaleUnit": "EA",
+                "ValidityEndDate": "/Date(4102444800000)/",
+                "ValidityStartDate": "/Date(1672531200000)/",
+                "CreatedByUser": "SALESREP02",
+                "CreationDate": "/Date(1672531200000)/"
+              }
+            ]
+          }
+        },
+        "get_a_slsprcgconditionrecord": {
+          "description": "Retrieve a single sales pricing condition record by its key.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ConditionRecord": { "type": "string", "description": "Condition record number (10-digit)" },
+              "$select": { "type": "string", "description": "Fields to return" },
+              "$expand": { "type": "string", "description": "Navigation properties to expand" }
+            },
+            "required": ["ConditionRecord"]
+          },
+          "mock_response": {
+            "ConditionRecord": "0000100001",
+            "ConditionType": "K007",
+            "RateWithUnit": "8.000",
+            "ConditionRateValue": "8.000",
+            "ConditionRateValueUnit": "%",
+            "SoldToParty": "C1001",
+            "ValidityEndDate": "/Date(4102444800000)/",
+            "ValidityStartDate": "/Date(1704067200000)/"
+          }
+        },
+        "count_a_slsprcgconditionrecord": {
+          "description": "Get the total count of pricing condition records.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$filter": { "type": "string", "description": "OData filter expression" }
+            },
+            "required": []
+          },
+          "mock_response": { "value": 2 }
+        },
+        "list_a_slsprcgconditionrecordtext": {
+          "description": "Retrieve a list of pricing condition record texts.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string", "description": "Maximum number of results" },
+              "$filter": { "type": "string", "description": "OData filter expression" },
+              "$select": { "type": "string", "description": "Fields to return" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "ConditionRecord": "0000100001",
+                "Language": "EN",
+                "ConditionText": "Customer Discount K007 - ACME Corp"
+              }
+            ]
+          }
+        },
+        "get_a_slsprcgconditionrecordtext": {
+          "description": "Retrieve a single pricing condition record text by its key.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ConditionRecord": { "type": "string", "description": "Condition record number" },
+              "Language": { "type": "string", "description": "Language key" }
+            },
+            "required": ["ConditionRecord", "Language"]
+          },
+          "mock_response": {
+            "ConditionRecord": "0000100001",
+            "Language": "EN",
+            "ConditionText": "Customer Discount K007 - ACME Corp"
+          }
+        },
+        "count_a_slsprcgconditionrecordtext": {
+          "description": "Get the total count of pricing condition record texts.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$filter": { "type": "string", "description": "OData filter expression" }
+            },
+            "required": []
+          },
+          "mock_response": { "value": 1 }
+        },
+        "list_to_slsprcgcndnrecdsuplmnt_in_a_slsprcgcndnrecdvalidity": {
+          "description": "Navigate from A_SlsPrcgCndnRecdValidity to related supplement entities.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ConditionRecord": { "type": "string", "description": "Condition record number" },
+              "ConditionValidityEndDate": { "type": "string", "description": "Validity end date" },
+              "$top": { "type": "string", "description": "Maximum number of results" }
+            },
+            "required": ["ConditionRecord", "ConditionValidityEndDate"]
+          },
+          "mock_response": { "results": [] }
+        },
+        "count_to_slsprcgcndnrecdsuplmnt_in_a_slsprcgcndnrecdvalidity": {
+          "description": "Count supplement entities accessible via the validity navigation property.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ConditionRecord": { "type": "string" },
+              "ConditionValidityEndDate": { "type": "string" }
+            },
+            "required": ["ConditionRecord", "ConditionValidityEndDate"]
+          },
+          "mock_response": { "value": 0 }
+        },
+        "list_to_slsprcgcndnrecdvalidity_in_a_slsprcgconditionrecord": {
+          "description": "Navigate from A_SlsPrcgConditionRecord to related validity entities.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ConditionRecord": { "type": "string", "description": "Condition record number" },
+              "$top": { "type": "string", "description": "Maximum number of results" }
+            },
+            "required": ["ConditionRecord"]
+          },
+          "mock_response": {
+            "results": [
+              {
+                "ConditionRecord": "0000100001",
+                "ConditionValidityEndDate": "/Date(4102444800000)/",
+                "ConditionValidityStartDate": "/Date(1704067200000)/",
+                "ConditionTableName": "A004"
+              }
+            ]
+          }
+        },
+        "count_to_slsprcgcndnrecdvalidity_in_a_slsprcgconditionrecord": {
+          "description": "Count validity entities accessible via the condition record navigation property.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ConditionRecord": { "type": "string" }
+            },
+            "required": ["ConditionRecord"]
+          },
+          "mock_response": { "value": 1 }
+        },
+        "list_to_slsprcgconditionrecordtext_in_a_slsprcgconditionrecord": {
+          "description": "Navigate from A_SlsPrcgConditionRecord to related text entities.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ConditionRecord": { "type": "string", "description": "Condition record number" },
+              "$top": { "type": "string", "description": "Maximum number of results" }
+            },
+            "required": ["ConditionRecord"]
+          },
+          "mock_response": {
+            "results": [
+              {
+                "ConditionRecord": "0000100001",
+                "Language": "EN",
+                "ConditionText": "Customer Discount K007 - ACME Corp"
+              }
+            ]
+          }
+        },
+        "count_to_slsprcgconditionrecordtext_in_a_slsprcgconditionrecord": {
+          "description": "Count text entities accessible via the condition record navigation property.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ConditionRecord": { "type": "string" }
+            },
+            "required": ["ConditionRecord"]
+          },
+          "mock_response": { "value": 1 }
+        }
+      }
+    },
+    "s4-slspricingprocedure-srv": {
+      "mcp_server_name": "sap.mcp/api_slspricingprocedure_srv",
+      "description": "MCP server for the api_slspricingprocedure_srv service.",
+      "tools": {
+        "get_metadata_api_slspricingprocedure_srv": {
+          "description": "Get metadata of the OData service for pricing procedures.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "entitySet": { "type": "string", "description": "Filter to specific entity set" }
+            },
+            "required": []
+          },
+          "mock_response": "<edmx:Edmx Version=\"1.0\"><edmx:DataServices><Schema Namespace=\"API_SLSPRICINGPROCEDURE_SRV\"><EntityType Name=\"A_SlsPricingProcedure\"><Key><PropertyRef Name=\"PricingProcedure\"/></Key><Property Name=\"PricingProcedure\" Type=\"Edm.String\" MaxLength=\"6\"/><Property Name=\"PricingProcedureName\" Type=\"Edm.String\" MaxLength=\"30\"/></EntityType></Schema></edmx:DataServices></edmx:Edmx>"
+        },
+        "batch_for_api_slspricingprocedure_srv": {
+          "description": "Execute multiple OData operations in a single batch request for pricing procedures.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "requests": { "type": "array", "description": "Array of batch requests" }
+            },
+            "required": ["requests"]
+          },
+          "mock_response": { "responses": [] }
+        },
+        "list_a_slspricingconditiontype_for_api_slspricingprocedure_srv": {
+          "description": "Retrieve a list of sales pricing condition types.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string" },
+              "$filter": { "type": "string" },
+              "$select": { "type": "string" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "ConditionType": "K007",
+                "ConditionTypeName": "Customer Discount",
+                "ConditionCategory": "B",
+                "PlusMinusSign": "-",
+                "ConditionClass": "A"
+              },
+              {
+                "ConditionType": "K005",
+                "ConditionTypeName": "Customer/Material Discount",
+                "ConditionCategory": "B",
+                "PlusMinusSign": "-",
+                "ConditionClass": "A"
+              }
+            ]
+          }
+        },
+        "get_a_slspricingconditiontype_for_api_slspricingprocedure_srv": {
+          "description": "Retrieve a single sales pricing condition type by its key.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ConditionType": { "type": "string", "description": "Condition type key (e.g. K007)" }
+            },
+            "required": ["ConditionType"]
+          },
+          "mock_response": {
+            "ConditionType": "K007",
+            "ConditionTypeName": "Customer Discount",
+            "ConditionCategory": "B",
+            "PlusMinusSign": "-",
+            "ConditionClass": "A"
+          }
+        },
+        "count_a_slspricingconditiontype_for_api_slspricingprocedure_srv": {
+          "description": "Count pricing condition types.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$filter": { "type": "string" }
+            },
+            "required": []
+          },
+          "mock_response": { "value": 2 }
+        },
+        "list_a_slspricingprocedure_for_api_slspricingprocedure_srv": {
+          "description": "Retrieve a list of sales pricing procedures.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string" },
+              "$filter": { "type": "string" },
+              "$select": { "type": "string" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "PricingProcedure": "ZSTD01",
+                "PricingProcedureName": "Standard B2B Pricing",
+                "PricingProcedureDescription": "Standard pricing procedure for B2B sales"
+              }
+            ]
+          }
+        },
+        "get_a_slspricingprocedure_for_api_slspricingprocedure_srv": {
+          "description": "Retrieve a single pricing procedure by its key.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PricingProcedure": { "type": "string", "description": "Pricing procedure key" }
+            },
+            "required": ["PricingProcedure"]
+          },
+          "mock_response": {
+            "PricingProcedure": "ZSTD01",
+            "PricingProcedureName": "Standard B2B Pricing",
+            "PricingProcedureDescription": "Standard pricing procedure for B2B sales"
+          }
+        },
+        "count_a_slspricingprocedure_for_api_slspricingprocedure_srv": {
+          "description": "Count pricing procedures.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$filter": { "type": "string" }
+            },
+            "required": []
+          },
+          "mock_response": { "value": 1 }
+        },
+        "list_a_slspricingprocedureitem_for_api_slspricingprocedure_srv": {
+          "description": "Retrieve a list of pricing procedure steps/items.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string" },
+              "$filter": { "type": "string" },
+              "$select": { "type": "string" },
+              "$orderby": { "type": "string" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "PricingProcedure": "ZSTD01",
+                "PricingProcedureStep": "0010",
+                "PricingProcedureCounter": "0",
+                "ConditionType": "PR00",
+                "PricingProcedureItemDescription": "Base Price",
+                "IsMandatory": true,
+                "IsStatistical": false,
+                "PricingProcedureSubtotal": ""
+              },
+              {
+                "PricingProcedure": "ZSTD01",
+                "PricingProcedureStep": "0100",
+                "PricingProcedureCounter": "0",
+                "ConditionType": "K007",
+                "PricingProcedureItemDescription": "Customer Discount",
+                "IsMandatory": false,
+                "IsStatistical": false,
+                "MaximumConditionBasisValue": "15.000",
+                "PricingProcedureSubtotal": ""
+              },
+              {
+                "PricingProcedure": "ZSTD01",
+                "PricingProcedureStep": "0110",
+                "PricingProcedureCounter": "0",
+                "ConditionType": "K005",
+                "PricingProcedureItemDescription": "Customer/Material Discount",
+                "IsMandatory": false,
+                "IsStatistical": false,
+                "MaximumConditionBasisValue": "10.000",
+                "PricingProcedureSubtotal": ""
+              }
+            ]
+          }
+        },
+        "get_a_slspricingprocedureitem_for_api_slspricingprocedure_srv": {
+          "description": "Retrieve a single pricing procedure item/step by its key.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PricingProcedure": { "type": "string" },
+              "PricingProcedureStep": { "type": "string" },
+              "PricingProcedureCounter": { "type": "string" }
+            },
+            "required": ["PricingProcedure", "PricingProcedureStep", "PricingProcedureCounter"]
+          },
+          "mock_response": {
+            "PricingProcedure": "ZSTD01",
+            "PricingProcedureStep": "0100",
+            "PricingProcedureCounter": "0",
+            "ConditionType": "K007",
+            "PricingProcedureItemDescription": "Customer Discount",
+            "IsMandatory": false,
+            "IsStatistical": false,
+            "MaximumConditionBasisValue": "15.000"
+          }
+        },
+        "count_a_slspricingprocedureitem_for_api_slspricingprocedure_srv": {
+          "description": "Count pricing procedure items.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$filter": { "type": "string" }
+            },
+            "required": []
+          },
+          "mock_response": { "value": 3 }
+        },
+        "list_a_slspricingproceduretext_for_api_slspricingprocedure_srv": {
+          "description": "Retrieve a list of pricing procedure text descriptions.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string" },
+              "$filter": { "type": "string" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "PricingProcedure": "ZSTD01",
+                "Language": "EN",
+                "PricingProcedureName": "Standard B2B Pricing"
+              }
+            ]
+          }
+        },
+        "get_a_slspricingproceduretext_for_api_slspricingprocedure_srv": {
+          "description": "Retrieve a single pricing procedure text by its key.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PricingProcedure": { "type": "string" },
+              "Language": { "type": "string" }
+            },
+            "required": ["PricingProcedure", "Language"]
+          },
+          "mock_response": {
+            "PricingProcedure": "ZSTD01",
+            "Language": "EN",
+            "PricingProcedureName": "Standard B2B Pricing"
+          }
+        },
+        "count_a_slspricingproceduretext_for_api_slspricingprocedure_srv": {
+          "description": "Count pricing procedure text records.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$filter": { "type": "string" }
+            },
+            "required": []
+          },
+          "mock_response": { "value": 1 }
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "created_for_agent": "sales-discount-strategy-agent",
+    "mock_mode": true,
+    "deterministic": true,
+    "total_servers": 2,
+    "total_tools": 31,
+    "generated_from": [
+      "assets/sap-s4-slspricingconditionrecord-srv-mcp-server/mcp-translation/translation.json",
+      "assets/sap-s4-slspricingprocedure-srv-mcp-server/mcp-translation/translation.json"
+    ],
+    "generation_date": "2026-10-20"
+  }
+}
